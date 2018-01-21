@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买-白菜价</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="lib/pagination/pagination.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
+  
+</head>
+<body>
+  <div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header"> 
+       <div class="back">
+         <a href='javascript:history.go(-1)'>
+           <span class='fa fa-chevron-left'></span>
+         </a>
+       </div>
+      <h1>
+        白菜价-淘宝内部券
+      </h1>
+      <div class="appdown">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+      
+    
+    </div>
+    <!--白菜价标题列表-->
+       <div class="bcj-head-cat">
+         <div class="mui-scroll-wrapper">
+           <div class="mui-scroll">
+             <ul class='mui-clearfix'>
+               <!--挖个坑-->
+               <li class='active'><a href="baicaijia.html">全部</a></li>
+             </ul>
+           </div>
+         </div>
+         
+       </div>
+   
+    <!--主体区域-->
+    <div class="mmb_main">
+  
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+          
+          <!--产品区域-->
+          <div class="mmb_product">
+            <!--产品内容-->
+            <div class="product-content">
+              <ul>
+                <li>
+                  <!--gobuy的a-->
+                  <a biz-itemid="538754112089" class="gobuy" isconvert="1" href="http://s.click.taobao.com/lkqGHQx" target="_blank"></a>
+                  <div class="pic">
+                    <img src="images/productctrl.jpg" alt="">
+                  </div>
+                  <div class="info">
+                      <div class="info-top">
+                         <div class="t">
+                           动态渲染
+                         </div>
+                        <div class="pr">
+                          动态渲染
+                        </div>
+                      </div>
+                    <div class="info-bottom">
+                         <!--购物券的a-->
+                       <!--动态渲染一个div.bar-->
+                       
+                       <div class="b">
+                         <div class="q">
+                           优惠券的a
+                         </div>
+                         <div class="g">
+                           下单连接的a
+                         </div>
+                       </div>
+                    
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            
+            </div>
+           
+            
+          
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    
+    
+    <!--底部-->
+    <div class="mmb_footer">
+      <div class="footer_top">
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+          返回顶部</a>
+      </div>
+         <div class="footer_bottom">
+           <p>
+             <a href="javascript:;" style='color: red'>手机APP下载</a>
+             <a href="index.html">慢慢买手机版</a>
+             -- 掌上比价平台
+           </p>
+           <p>m.manmanbuy.com</p>
+         </div>
+    
+    </div>
+    
+  
+  </div>
+</body>
+</html>
+  <!--白菜价标题的的数据模板-->
+<script type='text/html' id='tpl-title'>
+  {{ each result $v $i}}
+  <li class='{{$i==0?"active":""}}'><a href="baicaijia.html?titleid={{$v.titleId}}" data-titleId={{$v.titleId}}  >{{$v.title}}</a></li>
+  {{/each}}
+
+</script>
+<!--白菜价折扣商品列表的数据模板-->
+<script type='text/html' id='tpl_list'>
+  {{ each result $v $i}}
+  <li>
+    <!--gobuy的a-->
+    <a biz-itemid="538754112089" class="gobuy" isconvert="1" href="http://s.click.taobao.com/lkqGHQx" target="_blank"></a>
+    <div class="pic">
+      <%  +$v.productImg  %>
+      <!--<img src="images/productctrl.jpg" alt="">-->
+    </div>
+    <div class="info">
+      <div class="info-top">
+        <div class="t">
+           <%  +$v.productName %>
+        </div>
+        <div class="pr">
+          <%  +$v.productPrice   %>
+        </div>
+      </div>
+      <div class="info-bottom">
+        <!--购物券的a-->
+        <!--动态渲染一个div.bar-->
+          <%  +$v.productCouponRemain   %>
+        <div class="b">
+          <div class="q">
+            <%  +$v.productCoupon  %>
+          </div>
+          <div class="g">
+          <%  +$v.productHref  %>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</script>
+
+<script src='lib/jquery/jquery-1.12.4.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/mui/js/mui.js'></script>
+<script src='lib/pagination/jquery.pagination.js'></script>
+<!--<script src='js/common.js'></script>-->
+<script src='js/baicaijia.js'></script>
+

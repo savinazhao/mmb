@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买-首页</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header"> 
+       <div class="logo">
+         <a href="index.html">
+           <img src="images/header_logo.png" alt="">
+         </a>
+       </div>
+      <div class="appdown">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+      
+    
+    </div>
+    <!--搜索-->
+    <div class="mmb_search">
+      <form action="">
+        <input type="text" placeholder='请输入你想比价的商品'>
+         <button type='button'>搜索</button>
+      </form>
+    </div>
+   
+    <!--主体区域-->
+    <div class="mmb_main">
+  
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+          <!--导航-->
+          <div class="mmb_nav">
+            <ul class='menu clearfix'>
+            
+             <!-- <li>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li class='hide'>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li class='hide'>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li class='hide'>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>
+              <li class='hide'>
+                <a href="#">
+                  <img src="images/ic_search.png" alt="">
+                  <p>比价搜索</p>
+                </a>
+              </li>-->
+            </ul>
+          </div>
+          <!--产品区域-->
+          <div class="mmb_product">
+              <div class="recommend-title">
+                <span class='mui-pull-left'>超值折扣推荐</span>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="" class='mui-pull-right'>
+              </div>
+            <!--产品内容-->
+            <div class="product-content">
+              <ul class="mui-table-view">
+                <!--挖个坑-->
+               
+              </ul>
+            </div>
+            
+            <div class="more-bar">
+              <a href="moneyctrl.html">更多优惠信息</a>
+            </div>
+  
+            <div class="recommend-title">
+              <span class='mui-pull-left'>品牌排行</span>
+              <img src="http://www.zuyushop.com/wap/images/more.png" alt="" class='mui-pull-right'>
+            </div>
+            
+          
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    
+    
+    <!--底部-->
+    <div class="mmb_footer">
+      <div class="footer_top">
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+          返回顶部</a>
+      </div>
+         <div class="footer_bottom">
+           <p>
+             <a href="javascript:;" style='color: red'>手机APP下载</a>
+             <a href="index.html">慢慢买手机版</a>
+             -- 掌上比价平台
+           </p>
+           <p>m.manmanbuy.com</p>
+         </div>
+    
+    </div>
+    
+  
+  </div>
+</body>
+</html>
+<!--首页菜单拉栏的数据模板-->
+<script type='text/html' id='tpl_menu'>
+  <% for(var i = 0;i< result.length;i++) {%>
+     <% if(i>= result.length-4){ %>
+    <li class='hide' data-id={{result[i].indexmenuId}}>
+      <a href="{{result[i].titlehref}}">
+        <!-- <img src="images/ic_search.png" alt="">-->
+        <% +result[i].img %>
+      
+        <p>{{result[i].name}}</p>
+      </a>
+    </li>
+  <% } else { %>
+  <li data-name= "{{result[i].name=='更多'?'more':''}}"  data-id={{result[i].indexmenuId}}>
+    <a href="{{result[i].titlehref}}">
+      <!-- <img src="images/ic_search.png" alt="">-->
+      <% +result[i].img %>
+    
+      <p>{{result[i].name}}</p>
+    </a>
+  </li>
+  <% } %>
+  
+  <% } %>
+ <!-- {{each result $v $i}}
+  <li>
+    <a href="{{$v.titlehref}}">
+     &lt;!&ndash; <img src="images/ic_search.png" alt="">&ndash;&gt;
+       <% +$v.img %>
+    
+      <p>{{$v.name}}</p>
+    </a>
+  </li>
+  {{/each}}-->
+</script>
+
+<script type='text/html' id='tpl_menu1'>
+   {{ each result $v $i}}
+   
+   <li data-name={{$v.name=="更多"?'more':''}}>
+     <a href="{{$v.titlehref}}">
+       <%  +$v.img    %>
+       <!--<img src="images/ic_search.png" alt="">-->
+       <p>{{$v.name}}</p>
+     </a>
+   </li>
+  
+
+
+</script>
+
+<!--折扣商品列表的数据模板-->
+<script type='text/html' id='tpl_list'>
+  {{ each result $v $i}}
+  <li class="mui-table-view-cell mui-media">
+    <a href="moneyproduct.html?productId={{$v.productId}}">
+      <% +$v.productImgSm %>
+      <!--<img class="mui-media-object mui-pull-left" src="images/mnav.jpg">-->
+      <div class="mui-media-body">
+        <div class="product-title">
+          {{$v.productName}}
+          <span>{{$v.productPinkage}}</span>
+        </div>
+        <div class="other mui-clearfix">
+          <span class='mall mui-pull-left'>{{$v.productFrom}} | {{$v.productTime}}</span>
+          <span class='comment mui-pull-right'>
+            <i class='icon-comment fa fa-commenting'></i>
+            {{$v.productComCount}}
+          </span>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+<script src='lib/jquery/jquery-1.12.4.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/mui/js/mui.js'></script>
+<script src='js/common.js'></script>
+<script src='js/index.js'></script>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买-国内折扣商品详情</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="lib/pagination/pagination.css">
+  <link rel="stylesheet" href="css/discount.css">
+  
+</head>
+<body>
+  <div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header"> 
+       <div class="back">
+         <a href='moneyctrl.html'>
+           <span class='fa fa-chevron-left'></span>
+         </a>
+       </div>
+      <h1>
+       国内折扣
+      </h1>
+      <div class="appdown">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+      
+    
+    </div>
+   
+    <!--主体区域-->
+    <div class="mmb_main">
+  
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+          <!--产品区域-->
+          <div class="mmb_product">
+            <!--产品内容-->
+            <div class="product-content">
+                  <h3 class='pro-title'>移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+              <div class="info">
+                <span class='mail'>京东商城</span>
+                <span class='addTime'>10-25 14:10</span>
+                <span class='author'>小编烟火 / 慢慢买</span>
+              </div>
+              <div class="content-detail">
+                   <div class="picwrap">
+                     <img src="images/productctrl.jpg" alt="">
+                   </div>
+                <div class="contents">
+                    <p>海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。</p>
+                  <p>哈哈</p>
+                  <p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>
+                  <p><img src="images/productctrl.jpg" alt=""></p>
+                </div>
+              </div>
+              <div class="city">
+                动态渲染
+              </div>
+              <div class="golink">
+                <a href="redirect.aspx?tjid=521575&y=cu_share">前往购买</a>
+              </div>
+            </div>
+           <div  style='margin: 20px 10px'>
+             <img src="images/mmbweixin2.png" alt="">
+           </div>
+            <!--评论-->
+            <div class="comm">
+              动态渲染
+            </div>
+            
+              
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    
+    
+    <!--底部-->
+    <div class="mmb_footer">
+      <div class="footer_top">
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+          返回顶部</a>
+      </div>
+         <div class="footer_bottom">
+           <p>
+             <a href="javascript:;" style='color: red'>手机APP下载</a>
+             <a href="index.html">慢慢买手机版</a>
+             -- 掌上比价平台
+           </p>
+           <p>m.manmanbuy.com</p>
+         </div>
+    
+    </div>
+    
+  
+  </div>
+</body>
+</html>
+<!--折扣商品详情的数据模板-->
+<script type='text/html' id='tpl'>
+  {{ each result $v $i}}
+  <!--产品内容-->
+  <div class="product-content">
+    <h3 class='pro-title'>{{$v.productName}}</h3>
+    <div class="info">
+      <span class='mail'>{{$v.productFrom}}</span>
+      <span class='addTime'>{{$v.productTime}}</span>
+      <span class='author'>{{$v.productTips}}</span>
+    </div>
+    <div class="content-detail">
+      <div class="picwrap">
+        <!--<img src="images/productctrl.jpg" alt="">-->
+      </div>
+      <div class="contents">
+        <p>{{$v.productInfo}}</p>
+       <!-- <p>{{$v.productInfo2}}</p>-->
+        <p>{{$v.productInfo1}}</p>
+        <p>
+          <!--<img src="images/productctrl.jpg" alt="">-->
+          <% +$v.productImg %>
+        </p>
+      </div>
+    </div>
+    <div class="city">
+       {{ if $v.productCity}}
+      <%  +$v.productCity  %>
+      {{/if}}
+    </div>
+    <div class="golink">
+      <a href="redirect.aspx?tjid=521575&y=cu_share">前往购买</a>
+    </div>
+  </div>
+  <div  style='margin: 20px 10px'>
+    <img src="images/mmbweixin2.png" alt="">
+  </div>
+  <!--评论-->
+  <div class="comm">
+   <%  +$v.productComment  %>
+  </div>
+  {{/each}}
+</script>
+
+<script src='lib/jquery/jquery-1.12.4.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/mui/js/mui.js'></script>
+<script src='lib/pagination/jquery.pagination.js'></script>
+<script src='js/common.js'></script>
+<script src='js/discount.js'></script>
+

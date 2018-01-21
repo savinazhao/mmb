@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买-凑单品</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="lib/pagination/pagination.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+  <div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header"> 
+       <div class="back">
+         <a href='javascript:history.go(-1)'>
+           <span class='fa fa-chevron-left'></span>
+         </a>
+       </div>
+      <h1>
+        凑单品
+      </h1>
+      <div class="appdown">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+      
+    
+    </div>
+   
+    <!--主体区域-->
+    <div class="mmb_main">
+  
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+            <div class="wrapper">
+              <div class="left">
+              <select name="shop" id="shop">
+                <!--挖个坑-->
+                <!--<option value="1">哈哈哈哈</option>-->
+                
+              </select>
+                <i class='fa fa-chevron-up '></i>
+              </div>
+              <div class="center">
+                <select name="area" id="area">
+                  <!--挖个坑-->
+                  <option value="">华东</option>
+                  
+                </select>
+                <i class='fa fa-chevron-up '></i>
+              </div>
+              <div class="right">
+                <select name="price" id="price">
+                  <option value="">全部价格</option>
+                </select>
+                <i class='fa fa-chevron-up '></i>
+              </div>
+             
+              <div class="search">
+                <i class='mui-icon mui-icon-search'></i>
+              </div>
+            </div>
+          <!--产品区域-->
+          <div class="mmb_product">
+            <!--产品内容-->
+            <div class="product-content">
+              <ul class='clearfix'>
+                <li>
+                  <a href="discount.html">
+                      <div class="img">
+                        <img src="images/product.jpg" alt="">
+                      </div>
+                    <div class="title mui-ellipsis-2">
+                      西域美农新疆特产五星和田红枣250g*2
+                    </div>
+                    <div class="dis-price  mui-pull-left">
+                      19.8元(5件99元)
+                    </div>
+                   <div class="btn mui-pull-right">
+                      凑单品
+                   </div>
+                    <div class="info">
+                      <span class='mail'>京东商城 | </span>
+                      <span class='time'>10-22 13:28</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="discount.html">
+                    <div class="img">
+                      <img src="images/product.jpg" alt="">
+                    </div>
+                    <div class="title">
+                      西域美农新疆特产五星和田红枣250g*2
+                    </div>
+                    <div class="dis-price">
+                      19.8元(5件99元)
+                    </div>
+                    <div class="info">
+                      <span class='mail'>京东商城 | </span>
+                      <span class='time'>10-22 13:28</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+           
+            
+          
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    
+    
+    <!--底部-->
+    <div class="mmb_footer">
+      <div class="footer_top">
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+          返回顶部</a>
+      </div>
+         <div class="footer_bottom">
+           <p>
+             <a href="javascript:;" style='color: red'>手机APP下载</a>
+             <a href="index.html">慢慢买手机版</a>
+             -- 掌上比价平台
+           </p>
+           <p>m.manmanbuy.com</p>
+         </div>
+    
+    </div>
+    
+  
+  </div>
+</body>
+</html>
+
+<!--全部商铺的模板-->
+<script type='text/html' id='tpl1'>
+  {{ each result $v $i}}
+  <option value="{{$v.shopId}}">{{$v.shopName}}</option>
+  {{/each}}
+</script>
+<!--全部区域的模板-->
+<script type='text/html' id='tpl2'>
+  
+  {{ each result $v $i}}
+  <option value="{{$v.areaId}}">{{$v.areaName}}</option>
+  {{/each}}
+</script>
+<!--凑单品的商品列表的数据模板-->
+<script type='text/html' id='tpl_list'>
+  {{ each result $v $i }}
+  <li>
+    <a href="">
+      <div class="img">
+        <img src="{{$v.productImg}}" alt="">
+      </div>
+      <div class="title">
+        {{$v.productName}}
+      </div>
+        <div class="box-wrapper mui-clearfix">
+          <div class="dis-price mui-pull-left">
+            {{$v.productPrice}}
+          </div>
+          <div class="btn mui-pull-right">
+            凑单品
+          </div>
+        </div>
+      <div class="info">
+        <span class='mail'>京东商城 | </span>
+        <span class='time'>10-22 13:28</span>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+<script src='lib/jquery/jquery-1.12.4.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/mui/js/mui.js'></script>
+<script src='lib/pagination/jquery.pagination.js'></script>
+<script src='lib/liandong/jquery.cxselect.js'></script>
+<script src='js/common.js'></script>
+<script src='js/gsproduct.js'></script>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买-分类页</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/bijia.css">
+  
+</head>
+<body>
+  <div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header"> 
+       <div class="logo">
+         <a href="index.html">
+           <img src="images/header_logo.png" alt="">
+         </a>
+       </div>
+      <div class="appdown">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+      
+    
+    </div>
+    <!--搜索-->
+    <div class="mmb_search">
+      <form action="">
+        <input type="text" placeholder='请输入你想比价的商品'>
+         <button type='button'>搜索</button>
+      </form>
+    </div>
+   
+    <!--主体区域-->
+    <div class="mmb_main">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+           <div class="product_list_title">
+             <a href="index.html">首页</a> >
+             <a href="productList.html" class='categoryName'>电视</a> >
+             <a href="#" class='proName'>乐视TV</a> >
+             <button class='mui-btn mui-pull-right'>筛选</button>
+           </div>
+          <!--商品详情-->
+          <div class="product-detail">
+            <div class="product_bijia">
+                <div class="product-name">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</div>
+              <div class="product-img">
+                <img src="images/productctrl.jpg" alt="">
+              </div>
+              <div class="product-collect">
+                <a href="javascript:;">
+                  <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
+                </a>
+              </div>
+              
+            </div>
+            <div class="tab">
+              <ul class='clearfix'>
+                <li><a href="javascript:;">比价购买</a></li>
+                <li class='mtb'><a href="javascript:;">产品参数</a></li>
+                <li><a href="javascript:;">评价(2322)</a></li>
+              </ul>
+            </div>
+            <div class="plist">
+              <div class='mui-clearfix'>
+                 <div class="plist_left mui-pull-left ">
+                     <span><a href="redirect.aspx?webid=1&bjid=76069915&tourl=http://item.jd.com/1162187.html&y=bijia" target="_blank">
+                       <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                     </a></span>
+                   <span>京东商城</span>
+                 </div>
+                <div class="plist_right mui-pull-right">
+                  <button class='mui-btn mui-btn-danger mui-pull-right'>去购买</button>
+                   <span class='pull-right'>&yen;1999</span>
+                </div>
+              </div>
+              <div class="note">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+              </div>
+            </div>
+            <!--评论-->
+            <div class="comment">
+              <div class="comm-title">
+                网友评价
+              </div>
+              <div class="comm-list">
+                <ul>
+                  <li>
+                     <div class='mui-clearfix'>
+                       <span class='mui-pull-left'>b***r</span>
+                       <span class='mui-pull-right'>2016/10/1</span>
+                     </div>
+                    <div class='mui-clearfix'>
+                      <span class='pull-right'>购买自：京东商城</span>
+                    </div>
+                    <div class="comm-content">
+                      使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线
+                    </div>
+                  </li>
+                </ul>
+                <div class="more">
+                  <button class='mui-btn mui-btn-block'>查看更多</button>
+                </div>
+              </div>
+            </div>
+            
+          
+          </div>
+      </div>
+      </div>
+    </div>
+    
+    <!--底部-->
+    <div class="mmb_footer">
+      <div class="footer_top">
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+          返回顶部</a>
+      </div>
+         <div class="footer_bottom">
+           <p>
+             <a href="javascript:;" style='color: red'>手机APP下载</a>
+             <a href="index.html">慢慢买手机版</a>
+             -- 掌上比价平台
+           </p>
+           <p>m.manmanbuy.com</p>
+         </div>
+    
+    </div>
+    
+  
+  </div>
+</body>
+</html>
+
+<!--头部导航的数据模板-->
+<script type='text/html' id='tpl_nav'>
+  {{ each result $v $i}}
+  <a href="index.html">首页</a> >
+  <a href="productList.html?categoryid={{$v.categoryId}}&category={{$v.category}}&pageid=1" class='categoryName'>{{$v.category}}</a> >
+  <a href="#" class='proName'>乐视TV</a> >
+  <button class='mui-btn mui-pull-right'>筛选</button>
+  {{/each}}
+</script>
+ <!--商品详情的比价数据模板-->
+<script type='text/html' id='tpl1'>
+  {{ each result $v $i}}
+  <div class="product-name">{{$v.productName}}</div>
+  <div class="product-img">
+    <% +$v.productImg %>
+    <!--<img src="images/productctrl.jpg" alt="">-->
+  </div>
+  <div class="product-collect">
+    <a href="javascript:;">
+      <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
+    </a>
+  </div>
+  {{/each}}
+</script>
+<!--商品详情plist部分的数据模板-->
+<script type='text/html' id='tpl2'>
+  {{ each result $v $i }}
+  <a href="redirect.aspx?webid=1&bjid=76069915&tourl=http://item.jd.com/1162187.html&y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');">
+   <% +$v.bjShop %>
+    <div class="note">
+      * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </div>
+  </a>
+  {{/each}}
+
+</script>
+
+<!--评论的数据模板-->
+<script type='text/html' id='tpl3'>
+  <div class="comm-title">
+    网友评价
+  </div>
+  <div class="comm-list">
+    <ul>
+        {{ each result $v $i}}
+      <li>
+        <div class='mui-clearfix'>
+          <span class='mui-pull-left'>{{$v.comName}}</span>
+          <span class='mui-pull-right'>{{$v.comTime}}</span>
+        </div>
+        <div class='mui-clearfix'>
+          <span class='pull-right'>{{$v.comFrom}}</span>
+        </div>
+        <div class="comm-content">
+           {{ $v.comContent}}
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    <div class="more">
+      <button class='mui-btn mui-btn-block'>查看更多</button>
+    </div>
+  </div>
+</script>
+<script src='lib/jquery/jquery-1.12.4.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/mui/js/mui.js'></script>
+<script src='js/common.js'></script>
+<script src='js/bijia.js'></script>
+
+
+

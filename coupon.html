@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买-优惠券</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="lib/pagination/pagination.css">
+  <link rel="stylesheet" href="css/coupon.css">
+</head>
+<body>
+  <div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header"> 
+       <div class="back">
+         <a href='index.html'>
+           <span class='fa fa-chevron-left'></span>
+         </a>
+       </div>
+      <h1>
+        优惠券
+      </h1>
+      <div class="appdown">
+        <a href="javascript:;">
+          <img src="images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+   
+    <!--主体区域-->
+    <div class="mmb_main">
+        <!--优惠券标题列表-->
+      <ul class='mui-clearfix'>
+        <li>
+          <a href="">
+            <img src="images/ic_cu.png" alt="">
+              肯德基
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    
+    <!--底部-->
+    <div class="mmb_footer">
+      <div class="footer_top">
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">
+          <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+          返回顶部</a>
+      </div>
+         <div class="footer_bottom">
+           <p>
+             <a href="javascript:;" style='color: red'>手机APP下载</a>
+             <a href="index.html">慢慢买手机版</a>
+             -- 掌上比价平台
+           </p>
+           <p>m.manmanbuy.com</p>
+         </div>
+    
+    </div>
+    
+  
+  </div>
+</body>
+</html>
+<!--优惠券标题的列表模板-->
+<script type='text/html' id='tpl_list'>
+  {{ each result $v $i}}
+  <li>
+    <a href="{{$v.couponLink}}?couponid={{$v.couponId}}&couponTitle={{$v.couponTitle}}">
+      <img src="{{$v.couponImg}}" alt="">
+      {{$v.couponTitle}}
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script src='lib/jquery/jquery-1.12.4.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/mui/js/mui.js'></script>
+<script src='lib/pagination/jquery.pagination.js'></script>
+<script src='js/common.js'></script>
+<script src='js/coupon.js'></script>
+
