@@ -95,15 +95,20 @@
     
     </div>
     
-  
   </div>
+  <!--蒙层-->
+  <div class="mo-layer" style='display: none'>
+    <img src="images/quan.jpg" alt="">
+
+  </div>
+
 </body>
 </html>
 <!--优惠券列表的数据模板-->
 <script type='text/html' id='tpl_list'>
   {{ each result $v $i}}
   <li class="mui-table-view-cell mui-media">
-    <a href="">
+    <a href="javascript:;">
        <% +$v.couponProductImg %>
       <!--<img class="mui-media-object mui-pull-left" src="images/mnav.jpg">-->
       <div class="mui-media-body">

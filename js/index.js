@@ -6,7 +6,17 @@ $(function () {
     success:function (info) {
       console.log(info);
       /*组装数据和模板*/
-      $('.menu').html(template('tpl_menu',info));
+      $('.menu').html(template('tpl_menu1',info));
+      var lis = $('.menu li');
+      var id = +$("[data-name='more']").data('id');
+      // console.log(id);
+      lis.each(function (i,e) {
+        var dataid = $(this).data('id');
+        // console.log(dataid);
+        if(  dataid >id) {
+             $(e).addClass('hide');
+           }
+      })
     }
   });
   /*点击更多*/
@@ -32,10 +42,5 @@ $(function () {
      $('.mui-table-view a img').addClass('mui-media-object').addClass('mui-pull-left');
     }
   })
-  
-  
-  
-  
-  
   
 })

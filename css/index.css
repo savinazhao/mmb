@@ -476,9 +476,9 @@ body {
 .mmb_product .product-content .product-title {
   color: #333;
   font-size: 0.3rem;
-  min-height: 57px;
   text-align: left;
-  line-height: 0.4rem;
+  height: 1rem;
+  line-height: 1rem;
 }
 .mmb_product .product-content .product-title span {
   color: #ff6c00;

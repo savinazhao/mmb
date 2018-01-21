@@ -206,15 +206,15 @@
 <script type='text/html' id='tpl_menu1'>
    {{ each result $v $i}}
    
-   <li data-name={{$v.name=="更多"?'more':''}}>
+   <li data-name="{{$v.name=='更多'?'more':''}}"  data-id={{$v.indexmenuId}}>
      <a href="{{$v.titlehref}}">
-       <%  +$v.img    %>
+       <%  +$v.img  %>
        <!--<img src="images/ic_search.png" alt="">-->
        <p>{{$v.name}}</p>
      </a>
    </li>
   
-
+{{/each}}
 
 </script>
 

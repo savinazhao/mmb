@@ -18,5 +18,11 @@ $(function () {
       $('.mui-table-view a img').addClass('mui-media-object').addClass('mui-pull-left');
       
     }
+  });
+  //点击右侧箭头弹出蒙层
+  $('.mui-table-view').on('click','a',function (e) {
+    e.preventDefault();
+         $('.mo-layer').css('display','block');
   })
+  
 })
