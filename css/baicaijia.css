@@ -467,6 +467,9 @@ body {
   width: 2.6rem;
   height: 2.6rem;
 }
+.product-content li .info {
+  overflow: hidden;
+}
 .product-content li .info .t {
   min-height: 0.56rem;
   max-height: 0.8rem;
@@ -496,9 +499,8 @@ body {
 .product-content li .info .info-bottom {
   position: absolute;
   bottom: 0.2rem;
-  padding: 0px 0.1rem 0px 2.7rem;
   box-sizing: border-box;
-  width: 100%;
+  width: 80%;
 }
 .product-content li .info .info-bottom .bar {
   height: 0.5rem;

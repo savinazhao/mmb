@@ -430,7 +430,7 @@ body {
 .mmb_product .product-content .product-title {
   color: #333;
   font-size: 0.3rem;
-  min-height: 57px;
+  height: 1.2rem;
   text-align: left;
   line-height: 0.4rem;
 }
@@ -438,6 +438,11 @@ body {
   color: #333;
   font-size: 0.3rem;
   height: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 0.6rem;
+  line-height: 0.6rem;
 }
 .mmb_product .product-content .product-title span {
   color: #ff6c00;
@@ -455,7 +460,7 @@ body {
 }
 .mmb_product .product-content .other .comment .icon-comment {
   display: inline-block;
-  width: 0.6rem;
+  width: 0.9rem;
   height: 0.3rem;
 }
 .mmb_product .pagination {

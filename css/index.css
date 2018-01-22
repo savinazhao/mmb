@@ -477,10 +477,16 @@ body {
   color: #333;
   font-size: 0.3rem;
   text-align: left;
-  height: 1rem;
-  line-height: 1rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
 }
-.mmb_product .product-content .product-title span {
+.mmb_product .product-content .product-title p {
+  color: #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mmb_product .product-content .product-title p span {
   color: #ff6c00;
 }
 .mmb_product .product-content .other {

@@ -53,11 +53,14 @@
       }
       .title {
         color: #333;
-        padding: 0 8rem/50;
+        //padding: 0 8rem/50;
         font-size: 14rem/50;
         text-align: left;
         height: 36rem/50;
-        line-height: 18rem/50
+        line-height: 36rem/50;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
       .box-wrapper {
         padding: 0 6rem/50;
@@ -112,24 +115,44 @@
           right: 50%;
         }
     }
+    select {
+      width: 100%;
+      padding: 0;
+      height: 40rem/50;
+      line-height: 40rem/50;
+      //padding-left: 50rem/50;
+    padding-left: 50%;
+      font-size: 16rem/50;
+      background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;;
+      //background-position: 60% center ;
+    }
+    .left {
+      select {
+        padding-left: 35%;
+        background-position: 65% center;
+
+      }
+    }
     .center {
       i {
         right: 10%;
+      }
+      select {
+        padding: 0;
+        background-position: 75% center;
       }
     }
     .right {
       i {
         right: 46%;
       }
+      select {
+        padding-left: 30%;
+        background-position: 70% center;
+      }
     }
-    select {
-      width: 100%;
-      padding: 0;
-      height: 40rem/50;
-      line-height: 40rem/50;
-      padding-left: 50rem/50;
-      font-size: 16rem/50;
-    }
+
+
    .search {
      width: 40rem/50;
      height: 40rem/50;

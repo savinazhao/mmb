@@ -53,13 +53,19 @@
     .product-title {
       color: #333;
       font-size: 15rem/50;
-      min-height: 57px;
+      //min-height: 57rem/50;
+      height: 60rem/50;
       text-align: left;
       line-height: 20rem/50;
       p {
         color: #333;
         font-size: 15rem/50;
         height: auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 30rem/50;
+        line-height: 30rem/50;
       }
       span {
         color:#ff6c00
@@ -78,7 +84,7 @@
       .comment {
         .icon-comment {
           display: inline-block;
-          width: 30rem/50;
+          width: 45rem/50;
           height: 15rem/50;
         }
       }

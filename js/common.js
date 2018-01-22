@@ -27,3 +27,9 @@ function getSearchObj() {
 function getSearch(key) {
   return getSearchObj()[key];
 }
+/*//返回顶部的功能
+//页面是区域滚动的，所有没有滚动条，不能回到顶部的功能
+$('.back-top').on('click',function () {
+
+})*/
+

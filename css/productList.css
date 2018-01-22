@@ -453,9 +453,12 @@ body {
 .product-content .product-title {
   color: #333;
   font-size: 0.3rem;
-  min-height: 44px;
+  height: 1rem;
   text-align: left;
-  line-height: 0.44rem;
+  line-height: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .product-content .price {
   font-size: 0.36rem;

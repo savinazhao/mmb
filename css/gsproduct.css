@@ -430,11 +430,13 @@ body {
 }
 .product-content ul li .title {
   color: #333;
-  padding: 0 0.16rem;
   font-size: 0.28rem;
   text-align: left;
   height: 0.72rem;
-  line-height: 0.36rem;
+  line-height: 0.72rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .product-content ul li .box-wrapper {
   padding: 0 0.12rem;
@@ -485,19 +487,32 @@ body {
   top: 0.26rem;
   right: 50%;
 }
-.wrapper .center i {
-  right: 10%;
-}
-.wrapper .right i {
-  right: 46%;
-}
 .wrapper select {
   width: 100%;
   padding: 0;
   height: 0.8rem;
   line-height: 0.8rem;
-  padding-left: 1rem;
+  padding-left: 50%;
   font-size: 0.32rem;
+  background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+}
+.wrapper .left select {
+  padding-left: 35%;
+  background-position: 65% center;
+}
+.wrapper .center i {
+  right: 10%;
+}
+.wrapper .center select {
+  padding: 0;
+  background-position: 75% center;
+}
+.wrapper .right i {
+  right: 46%;
+}
+.wrapper .right select {
+  padding-left: 30%;
+  background-position: 70% center;
 }
 .wrapper .search {
   width: 0.8rem;
