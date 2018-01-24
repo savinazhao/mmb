@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //正则表达式
+  /*var reg = /a/;//匹配字符串中出现a
+  var str = 'abdedd';
+  console.log(reg.test(str));*/
+  /*var reg = /\d/;//匹配数字，出现数字即可
+  var str = '123a';
+  console.log(reg.test(str));*/
+  /*var reg = /\w/;//匹配任意的数字，字符或者下划线
+  var str = '12sd';
+  console.log(reg.test(str));*/
+  /*var reg = /\W/;//匹配任意的非数字、字符、下划线
+  console.log(reg.test('1'));*/
+  /*var reg = /\s/;//匹配空白符,比如 空格 tab  回车键
+  console.log(reg.test(' '));*/
+ /* var reg = /./;//匹配除换行符外的任意字符
+  console.log(reg.test('\r\n'));
+*/
+/* var reg = /^ab/; //匹配以谁开始
+  console.log(reg.test('abse'));*/
+/*var reg = /ab$/;//匹配以谁结束
+  console.log(reg.test('cab'));*/
+/*var reg = /^ab$/;//精确匹配只能是ab
+  console.log(reg.test('abab'));*/
+
+//限制符
+  // * 出现0次或者多次  + 出现1次或者更多次
+  // ? 出现0次或者1次
+  // {n} 重复n次  {n,}  重复n次或者更多次  {n,m}
+ /* var reg = /[abc]/;//字符串中出现a,b,c中的一个即可
+  console.log(reg.test('abcde'));*/
+ /*var reg = /^[abc]$/;  //精确匹配只能是a或者b或者c
+  console.log(reg.test('abc'));*/  // [] 占一个字符
+/* var reg = /^[abc]$/;
+  console.log(reg.test('c'));*/
+/*var reg = new  RegExp('\d');//普通字符
+  console.log(reg.test('3'));//false*/
+/*
+var reg = RegExp('\\d');//转义了  \d 匹配数字
+  console.log(reg.test('3'));
+*/
+/*
+var reg = /^a|b$/; // | 或的意思  分为左右两部分
+  console.log(reg.test('cb'));
+*/
+var reg = /^(a|b)$/;  //分组 只能是a 或者b
+  console.log(reg.test('ac'));//false
+
+
+</script>

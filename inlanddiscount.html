@@ -114,7 +114,7 @@
 </html>
 <!--国内折扣商品列表的数据模板-->
 <script type='text/html' id='tpl_list'>
-  {{ each result $v $i}}
+  {{ each list $v $i}}
   <li>
     <a href="discount.html?productId={{$v.productId}}">
       <div class="img">
@@ -137,6 +137,7 @@
 </script>
 
 <script src='lib/jquery/jquery-1.12.4.js'></script>
+<script src='lib/lazyLoad/jquery.lazyload.js'></script>
 <script src='lib/artTemplate/template-web.js'></script>
 <script src='lib/mui/js/mui.js'></script>
 <script src='lib/pagination/jquery.pagination.js'></script>

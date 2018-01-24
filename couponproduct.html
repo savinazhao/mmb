@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="lib/pagination/pagination.css">
+  <link rel="stylesheet" href="lib/swiper/css/swiper.css">
   <link rel="stylesheet" href="css/couponproduct.css">
 </head>
 <body>
@@ -98,7 +99,25 @@
   </div>
   <!--蒙层-->
   <div class="mo-layer" style='display: none'>
-    <img src="images/quan.jpg" alt="">
+    <!--<img src="images/quan.jpg" alt="">-->
+    <!--轮播图容器-->
+    <div class="swiper-container">
+      <!--图片容器-->
+      <ul class='swiper-wrapper'>
+        <li class='swiper-slide'><a href="#"><img src="images/quan.jpg" alt=""></a></li>
+      </ul>
+     <!-- &lt;!&ndash;小圆点&ndash;&gt;
+      <div class="swiper-pagination"></div>-->
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    
+    <!--关闭按钮-->
+    <div class="close">
+      <i class='fa fa-close'></i>
+    </div>
+    
 
   </div>
 
@@ -108,7 +127,8 @@
 <script type='text/html' id='tpl_list'>
   {{ each result $v $i}}
   <li class="mui-table-view-cell mui-media">
-    <a href="javascript:;">
+    <a href="javascript:;" data-id='{{$v.couponProductId
+}}'>
        <% +$v.couponProductImg %>
       <!--<img class="mui-media-object mui-pull-left" src="images/mnav.jpg">-->
       <div class="mui-media-body">
@@ -128,9 +148,19 @@
   {{ /each}}
 </script>
 
+<!--轮播图的模板-->
+<script type='text/html' id='tpl1'>
+   {{ each list $v $i}}
+  <li class='swiper-slide'>
+    <a href="#"><% +$v.couponProductImg %></a>
+  </li>
+  {{/each}}
+</script>
+
 <script src='lib/jquery/jquery-1.12.4.js'></script>
 <script src='lib/artTemplate/template-web.js'></script>
 <script src='lib/mui/js/mui.js'></script>
 <script src='lib/pagination/jquery.pagination.js'></script>
+<script src='lib/swiper/js/swiper.js'></script>
 <script src='js/common.js'></script>
 <script src='js/couponproduct.js'></script>

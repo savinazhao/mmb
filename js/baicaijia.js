@@ -20,7 +20,7 @@ $(function () {
         var lis = $('.bcj-head-cat ul li');
         var  width = 0;
           lis.each(function (i,e) {
-            width += $(e).outerWidth(true);
+            width += Math.ceil($(e).outerWidth(true));
           });
     // var   width =lis.outerWidth(true)*lis.length;
     $('.bcj-head-cat ul').width(width);
@@ -47,13 +47,18 @@ $(function () {
     
     //给标题的a注册点击事件
   $('.bcj-head-cat').on('click','a',function (e) {
-      e.preventDefault();
+        e.preventDefault();
        $(this).parent('li').addClass('active').siblings().removeClass('active');
        var titleid = $(this).data('titleid');
          render(titleid);
   
   
-  })
+  });
+  
+  //页面是区域滚动的，所有没有滚动条，不能回到顶部的功能  mui有回到顶部和特定位置的功能
+  $('.back-top').on('click',function () {
+    mui('.mmb_main .mui-scroll-wrapper').scroll().scrollTo(0,0,1000);
+  });
   
   
   

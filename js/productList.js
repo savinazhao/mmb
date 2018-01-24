@@ -2,10 +2,11 @@ $(function () {
    //获取地址栏的参数
       var categorgId = getSearch('categoryid');
       // var categoryName = getSearch('category');
-      var pageId = 1;
-       /* if(categoryName) {
-          $('.product_list_title .categoryName').text(categoryName);
-        }*/
+      var pageId = getSearch('pageid');
+     /*    console.log(pageId);*/
+  /* if(categoryName) {
+     $('.product_list_title .categoryName').text(categoryName);
+   }*/
      //1.根据categoryId请求获取分类名称
   $.ajax({
     type:'get',
@@ -21,7 +22,7 @@ $(function () {
   });
         
         
-         render();
+         render();;
   function render() {
         //请求商品列表的数据
         $.ajax({
